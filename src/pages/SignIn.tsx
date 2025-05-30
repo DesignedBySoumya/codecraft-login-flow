@@ -89,6 +89,7 @@ const SignIn = () => {
     <AuthLayout 
       title="Welcome Back" 
       subtitle="Sign in to your CodeCraft account"
+      tagline="Continue your coding journey with CodeCraft"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <FormInput
@@ -114,7 +115,7 @@ const SignIn = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/forgot-password" 
-            className="text-sm text-green-400 hover:text-green-300 transition-colors"
+            className="text-sm text-neon-green hover:text-neon-blue transition-colors duration-300 font-medium hover:underline"
           >
             Forgot password?
           </Link>
@@ -134,7 +135,7 @@ const SignIn = () => {
             <div className="w-full border-t border-gray-600"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-gray-800 text-gray-400">Or continue with</span>
+            <span className="px-2 bg-gray-900 text-gray-400 font-poppins">Or continue with</span>
           </div>
         </div>
 
@@ -144,11 +145,11 @@ const SignIn = () => {
         />
 
         <div className="text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-400 font-poppins">
             Don't have an account?{' '}
             <Link 
               to="/signup" 
-              className="text-green-400 hover:text-green-300 font-medium transition-colors"
+              className="text-neon-green hover:text-neon-blue font-medium transition-colors duration-300 hover:underline"
             >
               Sign up
             </Link>
@@ -156,9 +157,9 @@ const SignIn = () => {
         </div>
 
         {/* Demo credentials hint */}
-        <div className="mt-6 p-3 bg-gray-700/30 border border-gray-600/50 rounded-lg">
-          <p className="text-xs text-gray-400 text-center">
-            <strong>Demo:</strong> demo@codecraft.com / password123
+        <div className="mt-6 p-4 bg-neon-green/5 border border-neon-green/20 rounded-lg backdrop-blur-sm">
+          <p className="text-xs text-neon-green text-center font-mono">
+            <strong>Demo:</strong> demo@codecraft.com / DemoPass123
           </p>
         </div>
       </form>

@@ -12,7 +12,7 @@ const GoogleSignInButton = ({ onClick, loading }: GoogleSignInButtonProps) => {
       type="button"
       onClick={onClick}
       disabled={loading}
-      className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-white hover:bg-gray-50 text-gray-900 rounded-lg border border-gray-300 transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-gray-800/50 hover:bg-gray-700/50 text-white rounded-lg border border-gray-600/50 transition-all duration-300 hover:shadow-lg hover:border-neon-green/30 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm font-poppins transform hover:scale-105 active:scale-95"
     >
       <svg className="w-5 h-5" viewBox="0 0 24 24">
         <path
