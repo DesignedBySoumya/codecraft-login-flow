@@ -18,11 +18,11 @@ const LoadingButton = ({
   type = 'button',
   variant = 'primary' 
 }: LoadingButtonProps) => {
-  const baseClasses = "w-full px-6 py-4 rounded-xl font-medium transition-all duration-300 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-poppins relative overflow-hidden";
+  const baseClasses = "w-full px-4 py-3 rounded-lg font-medium transition-all duration-200 disabled:cursor-not-allowed flex items-center justify-center gap-2";
   
   const variantClasses = variant === 'primary' 
-    ? "bg-gradient-to-r from-neon-green to-neon-blue text-black font-semibold hover:shadow-[0_0_30px_rgba(0,255,171,0.5)] disabled:opacity-50 transform hover:scale-[1.02] active:scale-[0.98]"
-    : "bg-black/30 hover:bg-black/50 text-white border border-neon-green/30 hover:border-neon-green/60 disabled:opacity-50 backdrop-blur-sm";
+    ? "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-lg hover:shadow-green-500/25 disabled:opacity-50"
+    : "bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 disabled:opacity-50";
 
   return (
     <button
@@ -32,7 +32,7 @@ const LoadingButton = ({
       className={`${baseClasses} ${variantClasses}`}
     >
       {loading && (
-        <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
       )}
       {children}
     </button>
