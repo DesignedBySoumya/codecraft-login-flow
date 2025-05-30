@@ -98,7 +98,6 @@ const SignUp = () => {
     <AuthLayout 
       title="Create Account" 
       subtitle="Join CodeCraft and start building amazing projects"
-      tagline="Start your coding journey with CodeCraft"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <FormInput
@@ -124,7 +123,7 @@ const SignUp = () => {
         <FormInput
           label="Password"
           type="password"
-          placeholder="Create a strong password"
+          placeholder="Create a password"
           value={formData.password}
           onChange={(value) => handleInputChange('password', value)}
           error={errors.password}
@@ -155,7 +154,7 @@ const SignUp = () => {
             <div className="w-full border-t border-gray-600"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-gray-900 text-gray-400 font-poppins">Or continue with</span>
+            <span className="px-2 bg-gray-800 text-gray-400">Or continue with</span>
           </div>
         </div>
 
@@ -165,19 +164,19 @@ const SignUp = () => {
         />
 
         <div className="text-center">
-          <p className="text-gray-400 font-poppins">
+          <p className="text-gray-400">
             Already have an account?{' '}
             <Link 
               to="/" 
-              className="text-neon-green hover:text-neon-blue font-medium transition-colors duration-300 hover:underline"
+              className="text-green-400 hover:text-green-300 font-medium transition-colors"
             >
               Sign in
             </Link>
           </p>
         </div>
 
-        <div className="mt-4 p-4 bg-neon-blue/5 border border-neon-blue/20 rounded-lg backdrop-blur-sm">
-          <p className="text-xs text-neon-blue text-center font-poppins">
+        <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+          <p className="text-xs text-blue-300 text-center">
             By creating an account, you agree to our Terms of Service and Privacy Policy
           </p>
         </div>

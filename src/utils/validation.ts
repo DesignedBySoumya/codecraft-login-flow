@@ -8,18 +8,13 @@ export const validateEmail = (email: string): string | undefined => {
 
 export const validatePassword = (password: string): string | undefined => {
   if (!password) return 'Password is required';
-  if (password.length < 8) return 'Password must be at least 8 characters';
-  if (!/(?=.*[a-z])/.test(password)) return 'Password must contain at least one lowercase letter';
-  if (!/(?=.*[A-Z])/.test(password)) return 'Password must contain at least one uppercase letter';
-  if (!/(?=.*\d)/.test(password)) return 'Password must contain at least one number';
+  if (password.length < 6) return 'Password must be at least 6 characters';
   return undefined;
 };
 
 export const validateUsername = (username: string): string | undefined => {
   if (!username) return 'Username is required';
   if (username.length < 3) return 'Username must be at least 3 characters';
-  if (username.length > 15) return 'Username must be no more than 15 characters';
-  if (!/^[a-zA-Z0-9_]+$/.test(username)) return 'Username can only contain letters, numbers, and underscores';
   return undefined;
 };
 
